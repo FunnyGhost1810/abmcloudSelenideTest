@@ -1,0 +1,347 @@
+<html ng-app="admin-california" class="ng-scope"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<title>
+Admin California
+</title>
+<link rel="stylesheet" media="all" href="/assets/admin-6d0005e4da6a810c1230850fe29650a53bb6342acd981c134364f9500bca8b39.css">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="9Yi3c5ee8kZP02L+W7CvAfF98gFGztGeBPDGieq1g4/XC2WYyIeg64rcHG3HgwcMUJLjuqLyM7hNmHgJgefrsA==">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+<script src="/faye/client.js"></script></head>
+<body>
+<div class="main-wrapper">
+<header class="main-header">
+<div class="wrap">
+<div class="title">
+<div class="title-wrapper tooltip-ellipsis">
+Company list
+</div>
+</div>
+<div class="buttons-wrapper">
+</div>
+</div>
+</header>
+
+<aside class="side-nav">
+<nav class="side-nav__navigation">
+<a class="logo-link" id="company_logo_link">
+<div class="ic ic-logo"></div>
+</a>
+<ul class="side-nav__menu">
+<li class="menu-li" title="Dashboard"><a class="menu-link" id="nav-dashboard" href="/admin"><span class="menu-link-icon ic ic-dashboard"></span></a></li>
+<li class="menu-li" title="Application News"><a class="menu-link" id="nav-cloud_news_items" href="/admin/cloud_news_items"><span class="menu-link-icon ic ic-news"></span></a></li>
+<li class="menu-li" title="Users"><a class="menu-link" id="nav-users" href="/admin/users"><span class="menu-link-icon ic ic-users"></span></a></li>
+<li class="menu-li"><a class="menu-link" id="nav-global_settings" href="/admin/rbac/roles"><span class="menu-link-icon ic ic-settings-main"></span></a><ul class="dropdown menu-dropdown-bottom"><li><div class="nav-menu-header">Global settings</div></li>
+<li><a id="nav-roles" class="menu-dropdown-link" href="/admin/rbac/roles">Default user roles</a></li>
+<li><a id="nav-system_reasons" class="menu-dropdown-link" href="/admin/system_reasons">System reasons</a></li>
+<li><a id="nav-default_reasons" class="menu-dropdown-link" href="/admin/default_reasons">Default reasons</a></li>
+<li><a id="nav-currencies" class="menu-dropdown-link" href="/admin/currencies">Currencies</a></li>
+<li><a id="nav-application_users" class="menu-dropdown-link" href="/admin/application_users">Application users</a></li>
+<li><a id="nav-qlik_servers" class="menu-dropdown-link" href="/admin/qlik_servers">Qlik servers</a></li>
+</ul></li></ul>
+</nav>
+<ul class="footer">
+<li class="menu-li">
+<a class="menu-link pe-none">
+<img class="lang-ico" src="/assets/lang/en-a42e47040914561ed1e55126803b46af7b1ed2db54c0753c51e2798524eea2c9.svg">
+</a>
+<ul class="dropdown menu-dropdown-bottom">
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=en"><img class="lang-ico" src="/assets/lang/en-a42e47040914561ed1e55126803b46af7b1ed2db54c0753c51e2798524eea2c9.svg">
+<span>
+English
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=ka"><img class="lang-ico" src="/assets/lang/ka-bb5d8a0dbedc08a5b8f3a4024af4fc2aa7b6c0618de89e244944ba82bb8818bb.svg">
+<span>
+Georgian
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=pl"><img class="lang-ico" src="/assets/lang/pl-c4b7dd59f666ae769df70a9dd819da1224deeefbc83c36b73a4c5f6c1d60284d.svg">
+<span>
+Polish
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=pt-BR"><img class="lang-ico" src="/assets/lang/pt-BR-2356be7cec13c529e7049641d800497d69086ad21fdeef90333be78391b30def.svg">
+<span>
+Portuguese (Brazil)
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=ru"><img class="lang-ico" src="/assets/lang/ru-d457b774260b0b4ba9f54211c226a3cbfe578294fb9215181d6a1cae2ec8b88d.svg">
+<span>
+Russian
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=es"><img class="lang-ico" src="/assets/lang/es-59c1037053dadca52ef084bc3513c6f4e4f7a4ada626f8d8209333f73b0bf800.svg">
+<span>
+Spanish
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=uk"><img class="lang-ico" src="/assets/lang/uk-b74af231e381226899c09f9521a950a2fcec114a14e814c01c888350db49f7da.svg">
+<span>
+Ukrainian
+</span>
+</a></li>
+</ul>
+</li>
+
+<li class="account menu-li">
+<a class="menu-link pe-none">
+<span class="menu-link-icon ic ic-profile"></span>
+</a>
+<ul class="dropdown menu-dropdown-bottom account-menu">
+<span class="account-user-name">
+A A
+</span>
+<span class="account-user-email">
+kda.zemtsy@gmail.com
+</span>
+<hr class="account-separator">
+<ul>
+<li>
+<a id="back_to_admin" class="menu-dropdown-link" href="/admin/companies"><span class="ic ic-admin"></span>
+Admin panel
+</a></li>
+<li>
+<a class="menu-dropdown-link" target="_blank" href="http://support.abmcloud.com/"><span class="ic ic-support"></span>
+Support
+</a></li>
+<li>
+<a class="menu-dropdown-link" href="/admin/manual"><span class="ic ic-guide"></span>
+Manual
+</a></li>
+<li>
+<a class="menu-dropdown-link" data-target="#about-modal" data-toggle="modal" id="about-link">
+<span class="ic ic-info"></span>
+About
+</a>
+</li>
+<li>
+<a id="cloud-news-items-link" class="menu-dropdown-link" href="/admin?news=1698074441"><span class="ic ic-profile-news"></span>
+What's new?
+</a></li>
+<li>
+<a id="logout-link" class="menu-dropdown-link" href="/logout"><span class="ic ic-logout"></span>
+Logout
+</a></li>
+</ul>
+</ul>
+</li>
+
+</ul>
+</aside>
+
+<div class="main-wrapper-content">
+<div class="progress-wrapper load-block">
+<div class="progress hide">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar" style="width: 100%"></div>
+</div>
+<div class="inner text-center">
+<i class="ic ic-spinner fa-spin"></i>
+<h5 class="load-text">
+</h5>
+</div>
+</div>
+
+<div class="content-filter">
+<div class="content-filter-left">
+<a title="Add" class="small btn btn-secondary" href="/admin/companies/new"><i class="ic ic-plus"></i></a>
+</div>
+<div class="options-wrap">
+<div style="display: inline-block" data-formats="[&quot;csv&quot;,&quot;xlsx&quot;]" data-table-name="companies" data-url="/admin/companies/export_to" class="ng-isolate-scope">
+<button class="button download-button" data-original-title="Export to..." data-placement="left" title="" type="button">
+<i class="ic ic-download"></i>
+</button>
+<div class="download">
+<ul class="list">
+<!-- ngRepeat: format in formats --><li class="li ng-scope" ng-repeat="format in formats">
+<a class="link ng-binding" href="#" ng-click="exportLinkClick(format, $event)">Export to CSV</a>
+</li><!-- end ngRepeat: format in formats --><li class="li ng-scope" ng-repeat="format in formats">
+<a class="link ng-binding" href="#" ng-click="exportLinkClick(format, $event)">Export to XLSX</a>
+</li><!-- end ngRepeat: format in formats -->
+<!-- ngIf: export_files.length -->
+<!-- ngRepeat: (k, v) in export_files -->
+</ul>
+</div>
+</div>
+<button class="button filter-table-button ng-isolate-scope" data-placement="left" id="column_view_setup_btn" ng-class="{'active' : active}" ng-click="expand()" ng-hide="disabled" title="Columns setup..." type="button" table="companies">
+<i class="ic ic-table"></i>
+</button>
+</div>
+</div>
+<div class=" body-content-wrap"><div class="body-content-table-wrap">
+<div class="dhtmlx-grid-container-wrap">
+<div class="dhtmlx-grid-container gridbox gridbox_web isModern" data-align="center,left,left" data-header="Actions,System name,Status" data-ids="actions,system_name,status" data-layout-type="admin" data-move-url="/admin/users/company_column_move" data-move="false,false,false" data-name="companies" data-resize-column-url="/admin/tables/companies/resize_column" data-save-url="" data-sort-column="system_name" data-sort-order="des" data-sort="na,srv,srv" data-types="companies_actions,company_link,company_status" data-url="/admin.json" data-width=",," id="companies-table" style="width: 1269.2px; height: 48px; cursor: default;"><div class="xhdr" style="width: 100%; height: 24px; overflow: hidden; position: relative;"><div class="dhxgrid_sort_desc dhxgrid_sort_top" style="position: absolute; left: 231px; top: 5px; display: inline;"></div><table cellpadding="0" cellspacing="0" class="hdr main-table" style="width: 1269px; table-layout: fixed; margin-right: 20px; padding-right: 20px;"><tbody><tr style="height: auto;"><th style="height: 0px; width: 106px;"></th><th style="height: 0px; width: 138px;"></th><th style="height: 0px; width: 114px;"></th><th style="width: 911px; white-space: normal;"></th></tr><tr><td style="text-align: center;"><div class="hdrcell">Actions</div></td><td style="text-align: left;"><div class="hdrcell">System&nbsp;name</div></td><td style="text-align: left;"><div class="hdrcell">Status</div></td><td style="white-space: normal;"><div class="hdrcell">&nbsp;</div></td></tr></tbody></table></div><div class="objbox" style="width: 100%; overflow: hidden auto; height: 24px;"><table cellpadding="0" cellspacing="0" class="obj main-table row20px" style="width: 1269px; table-layout: fixed;"><tbody><tr style="height: auto;"><th style="height: 0px; width: 106px;"></th><th style="height: 0px; width: 138px;"></th><th style="height: 0px; width: 114px;"></th><th style="width: 911px;"></th></tr><tr class=" ev_web"><td align="center" valign="middle"><div class="btn-group"><a class="action-link" href="/admin/companies/21/users"><i class="ic ic-user"></i></a><a class="action-link" href="/admin/rbac/companies/21/company_roles"><i class="ic ic-admin-users"></i></a><a class="action-link" href="/admin/companies/21/settings/general"><i class="ic ic-settings"></i></a></div></td><td align="left" valign="middle"><a href="/test">test</a></td><td class="le66" align="left" valign="middle">Testing</td><td align="left" valign="" style="">&nbsp;</td></tr></tbody></table></div></div>
+</div>
+
+
+</div>
+</div><div class="content-footer">
+<div class="pagination-info" id="paging-info">1 row</div>
+<div id="paging-area"></div>
+</div>
+
+<div class="modal fade small confirmation-modal delete-confirmation-modal" id="confirm-delete-modal">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">
+Confirm your action
+</h4>
+<button class="modal-close-btn" data-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<b>
+<span class="checked-rows-length"></span>
+Company will be deleted. Do you want to continue?
+</b>
+</div>
+<div class="modal-footer">
+<a class="btn btn-ghost" data-dismiss="modal" id="cancel_btn" type="button">
+Cancel
+</a>
+<form id="confirm-delete-form" novalidate="novalidate" class="simple_form mass_update ng-pristine ng-valid" action="/admin" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" autocomplete="off"><input type="hidden" name="authenticity_token" value="9Yi3c5ee8kZP02L+W7CvAfF98gFGztGeBPDGieq1g4/XC2WYyIeg64rcHG3HgwcMUJLjuqLyM7hNmHgJgefrsA==" autocomplete="off"><input type="submit" name="commit" value="Ok" class="btn btn-primary" id="submit-mass-delete" data-disable-with="Ok">
+</form></div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+<div class="flash-messages" id="flash-messages">
+<div class="ng-alert alert fade in alert-success" id="alert_dialog"><button class="close ic ic-close" data-dismiss="alert"></button>Company destroyed</div>
+</div>
+<script src="/assets/admin-1f9c75807259885b0788890ac4f3850443d49497eea5df4d5e826dc4ca9b1644.js"></script>
+<script src="/assets/controllers/admin/companies-ee72859ab7c9149091381299e021777f1408ab6fcd056769415d2ee9477642c0.js"></script>
+</div>
+<script>
+//<![CDATA[
+window.FAYE_URL = "/faye";
+window.FAYE_USER_KEY = "3a204579412313feee39c58e4d98e3f8";
+window.FAYE_BROADCAST_KEY = "63b7d8ad6ecb3a80effb01da7cdce376";
+
+//]]>
+</script>
+<script>
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+  I18n.available_locales = "en,ka,pl,pt-BR,ru,es,uk";
+  I18n.fallbacks = "en";
+  I18n.missingPlaceholder = function(placeholder, message) {
+     return placeholder;
+  };
+  
+  dhtmlXCalendarObject.prototype.langData[I18n.locale] = {
+    monthesFNames: [
+      I18n.t('js.highcharts.lang.month.long.jan'),
+      I18n.t('js.highcharts.lang.month.long.feb'),
+      I18n.t('js.highcharts.lang.month.long.mar'),
+      I18n.t('js.highcharts.lang.month.long.apr'),
+      I18n.t('js.highcharts.lang.month.long.may'),
+      I18n.t('js.highcharts.lang.month.long.jun'),
+      I18n.t('js.highcharts.lang.month.long.jul'),
+      I18n.t('js.highcharts.lang.month.long.aug'),
+      I18n.t('js.highcharts.lang.month.long.sep'),
+      I18n.t('js.highcharts.lang.month.long.oct'),
+      I18n.t('js.highcharts.lang.month.long.nov'),
+      I18n.t('js.highcharts.lang.month.long.dec')],
+    monthesSNames: [
+      I18n.t('js.highcharts.lang.month.short.jan'),
+      I18n.t('js.highcharts.lang.month.short.feb'),
+      I18n.t('js.highcharts.lang.month.short.mar'),
+      I18n.t('js.highcharts.lang.month.short.apr'),
+      I18n.t('js.highcharts.lang.month.short.may'),
+      I18n.t('js.highcharts.lang.month.short.jun'),
+      I18n.t('js.highcharts.lang.month.short.jul'),
+      I18n.t('js.highcharts.lang.month.short.aug'),
+      I18n.t('js.highcharts.lang.month.short.sep'),
+      I18n.t('js.highcharts.lang.month.short.oct'),
+      I18n.t('js.highcharts.lang.month.short.nov'),
+      I18n.t('js.highcharts.lang.month.short.dec')],
+    daysFNames: [
+      I18n.t('js.highcharts.lang.weekdays.sun'),
+      I18n.t('js.highcharts.lang.weekdays.mon'),
+      I18n.t('js.highcharts.lang.weekdays.tue'),
+      I18n.t('js.highcharts.lang.weekdays.wed'),
+      I18n.t('js.highcharts.lang.weekdays.thu'),
+      I18n.t('js.highcharts.lang.weekdays.fri'),
+      I18n.t('js.highcharts.lang.weekdays.sat')],
+    daysSNames: [
+      I18n.t('js.highcharts.lang.weekdays.short.sun'),
+      I18n.t('js.highcharts.lang.weekdays.short.mon'),
+      I18n.t('js.highcharts.lang.weekdays.short.tue'),
+      I18n.t('js.highcharts.lang.weekdays.short.wed'),
+      I18n.t('js.highcharts.lang.weekdays.short.thu'),
+      I18n.t('js.highcharts.lang.weekdays.short.fri'),
+      I18n.t('js.highcharts.lang.weekdays.short.sat')]
+  };
+  
+  dhtmlXCalendarObject.prototype.lang = I18n.locale;
+</script>
+
+<script>
+angular.module('currentCompany', []).service('current_company', function(){
+    return false;
+});
+
+angular.module('currentDateTimeFormat', []).service('date_time_format', function(){
+  return {"dp_date_format":null,"moment_date_format":null,"dhtmlx_dp_date_format":null};
+});
+
+    moment.defaultFormat = '';
+
+    moment.dhtmlx_dp_date_format = '';
+
+  if($.fn.datepicker) {
+      _.each($.fn.datepicker.dates, function (attrs, locale) {
+          attrs.format = ''
+      });
+  }
+
+</script>
+
+<script>
+angular.module('currentUser', []).service('current_user', function(){
+    return {"id":11,"first_name":"A","last_name":"A","user_settings":[]};
+});
+
+</script>
+
+<div class="modal fade about-modal" id="about-modal" role="dialog">
+<div class="modal-dialog about-modal__modal">
+<div class="modal-content">
+<div class="modal-header flex-content--end" style="box-shadow: none;">
+<button name="button" type="submit" class="modal-close-btn" title="Close" data-dismiss="modal" data-placement="bottom"></button>
+</div>
+<div class="modal-body text-center">
+<div class="form-group">
+<img class="about-modal__img" src="/assets/leafio_logo-d7baae12b92b32978be60d5237d20888e959a3d3aaa61d98e80d8e8c348f9711.svg">
+</div>
+<div class="form-group about-modal__version">
+<strong>
+Version:
+4.80.0
+</strong>
+</div>
+<div class="form-group">
+<a class="about-modal__inventory-link" href="https://www.leafio.ai/inventory-optimization-solution/" target="_blank">
+leafio.ai&nbsp;
+<i class="ic ic-external-link"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</body></html>

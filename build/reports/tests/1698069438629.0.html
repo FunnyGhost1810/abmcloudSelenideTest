@@ -1,0 +1,477 @@
+<html ng-app="admin-california" class="ng-scope"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<title>
+Create new company - Admin California
+</title>
+<link rel="stylesheet" media="all" href="/assets/admin-6d0005e4da6a810c1230850fe29650a53bb6342acd981c134364f9500bca8b39.css">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="TEG4XQiF1qF/kPTthObkM5FxY+3Ictgg3K3D4cXnaBunqewq1dNsKAXXr2MYtPgU4Z7EggE3GafBmQzoPr+vZA==">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+</head>
+<body>
+<div class="main-wrapper">
+<header class="main-header">
+<div class="wrap">
+<div class="title">
+<div class="title-wrapper tooltip-ellipsis">
+Create new company
+</div>
+</div>
+<div class="buttons-wrapper">
+</div>
+</div>
+</header>
+
+<aside class="side-nav">
+<nav class="side-nav__navigation">
+<a class="logo-link" id="company_logo_link">
+<div class="ic ic-logo"></div>
+</a>
+<ul class="side-nav__menu">
+<li class="menu-li" title="Dashboard"><a class="menu-link" id="nav-dashboard" href="/admin"><span class="menu-link-icon ic ic-dashboard"></span></a></li>
+<li class="menu-li" title="Application News"><a class="menu-link" id="nav-cloud_news_items" href="/admin/cloud_news_items"><span class="menu-link-icon ic ic-news"></span></a></li>
+<li class="menu-li" title="Users"><a class="menu-link" id="nav-users" href="/admin/users"><span class="menu-link-icon ic ic-users"></span></a></li>
+<li class="menu-li"><a class="menu-link" id="nav-global_settings" href="/admin/rbac/roles"><span class="menu-link-icon ic ic-settings-main"></span></a><ul class="dropdown menu-dropdown-bottom"><li><div class="nav-menu-header">Global settings</div></li>
+<li><a id="nav-roles" class="menu-dropdown-link" href="/admin/rbac/roles">Default user roles</a></li>
+<li><a id="nav-system_reasons" class="menu-dropdown-link" href="/admin/system_reasons">System reasons</a></li>
+<li><a id="nav-default_reasons" class="menu-dropdown-link" href="/admin/default_reasons">Default reasons</a></li>
+<li><a id="nav-currencies" class="menu-dropdown-link" href="/admin/currencies">Currencies</a></li>
+<li><a id="nav-application_users" class="menu-dropdown-link" href="/admin/application_users">Application users</a></li>
+<li><a id="nav-qlik_servers" class="menu-dropdown-link" href="/admin/qlik_servers">Qlik servers</a></li>
+</ul></li></ul>
+</nav>
+<ul class="footer">
+<li class="menu-li">
+<a class="menu-link pe-none">
+<img class="lang-ico" src="/assets/lang/en-a42e47040914561ed1e55126803b46af7b1ed2db54c0753c51e2798524eea2c9.svg">
+</a>
+<ul class="dropdown menu-dropdown-bottom">
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=en"><img class="lang-ico" src="/assets/lang/en-a42e47040914561ed1e55126803b46af7b1ed2db54c0753c51e2798524eea2c9.svg">
+<span>
+English
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=ka"><img class="lang-ico" src="/assets/lang/ka-bb5d8a0dbedc08a5b8f3a4024af4fc2aa7b6c0618de89e244944ba82bb8818bb.svg">
+<span>
+Georgian
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=pl"><img class="lang-ico" src="/assets/lang/pl-c4b7dd59f666ae769df70a9dd819da1224deeefbc83c36b73a4c5f6c1d60284d.svg">
+<span>
+Polish
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=pt-BR"><img class="lang-ico" src="/assets/lang/pt-BR-2356be7cec13c529e7049641d800497d69086ad21fdeef90333be78391b30def.svg">
+<span>
+Portuguese (Brazil)
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=ru"><img class="lang-ico" src="/assets/lang/ru-d457b774260b0b4ba9f54211c226a3cbfe578294fb9215181d6a1cae2ec8b88d.svg">
+<span>
+Russian
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=es"><img class="lang-ico" src="/assets/lang/es-59c1037053dadca52ef084bc3513c6f4e4f7a4ada626f8d8209333f73b0bf800.svg">
+<span>
+Spanish
+</span>
+</a></li>
+<li>
+<a class="menu-dropdown-link" rel="nofollow" data-method="put" href="/profile/set_locale?locale=uk"><img class="lang-ico" src="/assets/lang/uk-b74af231e381226899c09f9521a950a2fcec114a14e814c01c888350db49f7da.svg">
+<span>
+Ukrainian
+</span>
+</a></li>
+</ul>
+</li>
+
+<li class="account menu-li">
+<a class="menu-link pe-none">
+<span class="menu-link-icon ic ic-profile"></span>
+</a>
+<ul class="dropdown menu-dropdown-bottom account-menu">
+<span class="account-user-name">
+A A
+</span>
+<span class="account-user-email">
+kda.zemtsy@gmail.com
+</span>
+<hr class="account-separator">
+<ul>
+<li>
+<a id="back_to_admin" class="menu-dropdown-link" href="/admin/companies"><span class="ic ic-admin"></span>
+Admin panel
+</a></li>
+<li>
+<a class="menu-dropdown-link" target="_blank" href="http://support.abmcloud.com/"><span class="ic ic-support"></span>
+Support
+</a></li>
+<li>
+<a class="menu-dropdown-link" href="/admin/manual"><span class="ic ic-guide"></span>
+Manual
+</a></li>
+<li>
+<a class="menu-dropdown-link" data-target="#about-modal" data-toggle="modal" id="about-link">
+<span class="ic ic-info"></span>
+About
+</a>
+</li>
+<li>
+<a id="cloud-news-items-link" class="menu-dropdown-link" href="/admin?news=1698069434"><span class="ic ic-profile-news"></span>
+What's new?
+</a></li>
+<li>
+<a id="logout-link" class="menu-dropdown-link" href="/logout"><span class="ic ic-logout"></span>
+Logout
+</a></li>
+</ul>
+</ul>
+</li>
+
+</ul>
+</aside>
+
+<div class="main-wrapper-content">
+<div class="progress-wrapper load-block">
+<div class="progress hide">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar" style="width: 100%"></div>
+</div>
+<div class="inner text-center">
+<i class="ic ic-spinner fa-spin"></i>
+<h5 class="load-text">
+</h5>
+</div>
+</div>
+
+<div class="wrapper-md">
+<div class="panel panel-default">
+<div class="panel-heading font-bold">
+New company creation form
+</div>
+<div class="panel-body">
+<form class="simple_form form-horizontal ng-pristine ng-valid" id="new_company" novalidate="novalidate" action="/admin/companies" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="hidden" name="authenticity_token" value="TEG4XQiF1qF/kPTthObkM5FxY+3Ictgg3K3D4cXnaBunqewq1dNsKAXXr2MYtPgU4Z7EggE3GafBmQzoPr+vZA==" autocomplete="off"><div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group string required company_name"><label class="col-sm-3 control-label string required" for="company_name">Name <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><input class="form-control string required" type="text" value="companyName" name="company[name]" id="company_name"></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group string required company_system_name has-error"><label class="col-sm-3 control-label string required" for="company_system_name">System name <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><input class="form-control string required" aria-invalid="true" type="text" value="systemCompanyName" name="company[system_name]" id="company_system_name"><span class="help-block">has already been taken</span><p class="help-block">Used as header in some mail reports and company link generation, i.e abmcloud.us/company_name</p></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group row flex-item--center select required company_locale"><label class="col-sm-3 control-label select required" for="company_locale">Language <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><select class="form-control select-single select required" name="company[locale]" id="company_locale"><option selected="selected" value="en">English</option>
+<option value="ka">Georgian</option>
+<option value="pl">Polish</option>
+<option value="pt-BR">Portuguese (Brazil)</option>
+<option value="ru">Russian</option>
+<option value="es">Spanish</option>
+<option value="uk">Ukrainian</option></select></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group row flex-item--center select required company_base_currency"><label class="col-sm-3 control-label select required" for="company_base_currency_id">Base currency <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><select class="form-control select-single select required" name="company[base_currency_id]" id="company_base_currency_id"><option value="1">USD(US Dollar)</option>
+<option value="2">EUR(Euro)</option></select></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group row flex-item--center select required company_source_currency_updates"><label class="col-sm-3 control-label select required" for="company_source_currency_updates">Currency update source <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><select class="form-control select-single select required" name="company[source_currency_updates]" id="company_source_currency_updates"><option selected="selected" value="ua">National Bank of Ukraine</option>
+<option value="ru">Central Bank of Russia</option></select></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group row flex-item--center select required company_datetime_format"><label class="col-sm-3 control-label select required" for="company_datetime_format">Datetime format <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><select class="form-control select-single select required" name="company[datetime_format]" id="company_datetime_format"><option selected="selected" value="dmy_colons">DD:MM:YYYY HH:MM:SS 24h</option>
+<option value="dmy_dashes">DD-MM-YYYY HH:MM:SS 24h</option>
+<option value="ymd_dots">YYYY.MM.DD HH:MM:SS 24h</option>
+<option value="ymd_dashes">YYYY-MM-DD HH:MM:SS 24h</option>
+<option value="ymd_slashes">YYYY/MM/DD HH:MM:SS 24h</option>
+<option value="dmy_dots">DD.MM.YYYY HH:MM:SS 24h</option></select></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-group time_zone required company_time_zone"><label class="col-sm-3 control-label time_zone required" for="company_time_zone">Time zone <abbr title="Required to fill out">*</abbr></label><div class="col-sm-9"><select class="form-control time_zone required" name="company[time_zone]" id="company_time_zone"><option value="International Date Line West">(GMT-12:00) International Date Line West</option>
+<option value="American Samoa">(GMT-11:00) American Samoa</option>
+<option value="Midway Island">(GMT-11:00) Midway Island</option>
+<option value="Hawaii">(GMT-10:00) Hawaii</option>
+<option value="Alaska">(GMT-09:00) Alaska</option>
+<option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+<option value="Tijuana">(GMT-08:00) Tijuana</option>
+<option value="Arizona">(GMT-07:00) Arizona</option>
+<option value="Mazatlan">(GMT-07:00) Mazatlan</option>
+<option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+<option value="Central America">(GMT-06:00) Central America</option>
+<option value="Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &amp; Canada)</option>
+<option value="Chihuahua">(GMT-06:00) Chihuahua</option>
+<option value="Guadalajara">(GMT-06:00) Guadalajara</option>
+<option value="Mexico City">(GMT-06:00) Mexico City</option>
+<option value="Monterrey">(GMT-06:00) Monterrey</option>
+<option value="Saskatchewan">(GMT-06:00) Saskatchewan</option>
+<option value="Bogota">(GMT-05:00) Bogota</option>
+<option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+<option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+<option value="Lima">(GMT-05:00) Lima</option>
+<option value="Quito">(GMT-05:00) Quito</option>
+<option value="Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)</option>
+<option value="Caracas">(GMT-04:00) Caracas</option>
+<option value="Georgetown">(GMT-04:00) Georgetown</option>
+<option value="La Paz">(GMT-04:00) La Paz</option>
+<option value="Puerto Rico">(GMT-04:00) Puerto Rico</option>
+<option value="Santiago">(GMT-04:00) Santiago</option>
+<option value="Newfoundland">(GMT-03:30) Newfoundland</option>
+<option value="Brasilia">(GMT-03:00) Brasilia</option>
+<option value="Buenos Aires">(GMT-03:00) Buenos Aires</option>
+<option value="Greenland">(GMT-03:00) Greenland</option>
+<option value="Montevideo">(GMT-03:00) Montevideo</option>
+<option value="Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option>
+<option value="Azores">(GMT-01:00) Azores</option>
+<option value="Cape Verde Is.">(GMT-01:00) Cape Verde Is.</option>
+<option value="Edinburgh">(GMT+00:00) Edinburgh</option>
+<option value="Lisbon">(GMT+00:00) Lisbon</option>
+<option value="London">(GMT+00:00) London</option>
+<option value="Monrovia">(GMT+00:00) Monrovia</option>
+<option selected="selected" value="UTC">(GMT+00:00) UTC</option>
+<option value="Amsterdam">(GMT+01:00) Amsterdam</option>
+<option value="Belgrade">(GMT+01:00) Belgrade</option>
+<option value="Berlin">(GMT+01:00) Berlin</option>
+<option value="Bern">(GMT+01:00) Bern</option>
+<option value="Bratislava">(GMT+01:00) Bratislava</option>
+<option value="Brussels">(GMT+01:00) Brussels</option>
+<option value="Budapest">(GMT+01:00) Budapest</option>
+<option value="Casablanca">(GMT+01:00) Casablanca</option>
+<option value="Copenhagen">(GMT+01:00) Copenhagen</option>
+<option value="Dublin">(GMT+01:00) Dublin</option>
+<option value="Ljubljana">(GMT+01:00) Ljubljana</option>
+<option value="Madrid">(GMT+01:00) Madrid</option>
+<option value="Paris">(GMT+01:00) Paris</option>
+<option value="Prague">(GMT+01:00) Prague</option>
+<option value="Rome">(GMT+01:00) Rome</option>
+<option value="Sarajevo">(GMT+01:00) Sarajevo</option>
+<option value="Skopje">(GMT+01:00) Skopje</option>
+<option value="Stockholm">(GMT+01:00) Stockholm</option>
+<option value="Vienna">(GMT+01:00) Vienna</option>
+<option value="Warsaw">(GMT+01:00) Warsaw</option>
+<option value="West Central Africa">(GMT+01:00) West Central Africa</option>
+<option value="Zagreb">(GMT+01:00) Zagreb</option>
+<option value="Zurich">(GMT+01:00) Zurich</option>
+<option value="Athens">(GMT+02:00) Athens</option>
+<option value="Bucharest">(GMT+02:00) Bucharest</option>
+<option value="Cairo">(GMT+02:00) Cairo</option>
+<option value="Harare">(GMT+02:00) Harare</option>
+<option value="Helsinki">(GMT+02:00) Helsinki</option>
+<option value="Jerusalem">(GMT+02:00) Jerusalem</option>
+<option value="Kaliningrad">(GMT+02:00) Kaliningrad</option>
+<option value="Kyiv">(GMT+02:00) Kyiv</option>
+<option value="Pretoria">(GMT+02:00) Pretoria</option>
+<option value="Riga">(GMT+02:00) Riga</option>
+<option value="Sofia">(GMT+02:00) Sofia</option>
+<option value="Tallinn">(GMT+02:00) Tallinn</option>
+<option value="Vilnius">(GMT+02:00) Vilnius</option>
+<option value="Baghdad">(GMT+03:00) Baghdad</option>
+<option value="Istanbul">(GMT+03:00) Istanbul</option>
+<option value="Kuwait">(GMT+03:00) Kuwait</option>
+<option value="Minsk">(GMT+03:00) Minsk</option>
+<option value="Moscow">(GMT+03:00) Moscow</option>
+<option value="Nairobi">(GMT+03:00) Nairobi</option>
+<option value="Riyadh">(GMT+03:00) Riyadh</option>
+<option value="St. Petersburg">(GMT+03:00) St. Petersburg</option>
+<option value="Volgograd">(GMT+03:00) Volgograd</option>
+<option value="Tehran">(GMT+03:30) Tehran</option>
+<option value="Abu Dhabi">(GMT+04:00) Abu Dhabi</option>
+<option value="Baku">(GMT+04:00) Baku</option>
+<option value="Muscat">(GMT+04:00) Muscat</option>
+<option value="Samara">(GMT+04:00) Samara</option>
+<option value="Tbilisi">(GMT+04:00) Tbilisi</option>
+<option value="Yerevan">(GMT+04:00) Yerevan</option>
+<option value="Kabul">(GMT+04:30) Kabul</option>
+<option value="Ekaterinburg">(GMT+05:00) Ekaterinburg</option>
+<option value="Islamabad">(GMT+05:00) Islamabad</option>
+<option value="Karachi">(GMT+05:00) Karachi</option>
+<option value="Tashkent">(GMT+05:00) Tashkent</option>
+<option value="Chennai">(GMT+05:30) Chennai</option>
+<option value="Kolkata">(GMT+05:30) Kolkata</option>
+<option value="Mumbai">(GMT+05:30) Mumbai</option>
+<option value="New Delhi">(GMT+05:30) New Delhi</option>
+<option value="Sri Jayawardenepura">(GMT+05:30) Sri Jayawardenepura</option>
+<option value="Kathmandu">(GMT+05:45) Kathmandu</option>
+<option value="Almaty">(GMT+06:00) Almaty</option>
+<option value="Astana">(GMT+06:00) Astana</option>
+<option value="Dhaka">(GMT+06:00) Dhaka</option>
+<option value="Urumqi">(GMT+06:00) Urumqi</option>
+<option value="Rangoon">(GMT+06:30) Rangoon</option>
+<option value="Bangkok">(GMT+07:00) Bangkok</option>
+<option value="Hanoi">(GMT+07:00) Hanoi</option>
+<option value="Jakarta">(GMT+07:00) Jakarta</option>
+<option value="Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
+<option value="Novosibirsk">(GMT+07:00) Novosibirsk</option>
+<option value="Beijing">(GMT+08:00) Beijing</option>
+<option value="Chongqing">(GMT+08:00) Chongqing</option>
+<option value="Hong Kong">(GMT+08:00) Hong Kong</option>
+<option value="Irkutsk">(GMT+08:00) Irkutsk</option>
+<option value="Kuala Lumpur">(GMT+08:00) Kuala Lumpur</option>
+<option value="Perth">(GMT+08:00) Perth</option>
+<option value="Singapore">(GMT+08:00) Singapore</option>
+<option value="Taipei">(GMT+08:00) Taipei</option>
+<option value="Ulaanbaatar">(GMT+08:00) Ulaanbaatar</option>
+<option value="Osaka">(GMT+09:00) Osaka</option>
+<option value="Sapporo">(GMT+09:00) Sapporo</option>
+<option value="Seoul">(GMT+09:00) Seoul</option>
+<option value="Tokyo">(GMT+09:00) Tokyo</option>
+<option value="Yakutsk">(GMT+09:00) Yakutsk</option>
+<option value="Adelaide">(GMT+09:30) Adelaide</option>
+<option value="Darwin">(GMT+09:30) Darwin</option>
+<option value="Brisbane">(GMT+10:00) Brisbane</option>
+<option value="Canberra">(GMT+10:00) Canberra</option>
+<option value="Guam">(GMT+10:00) Guam</option>
+<option value="Hobart">(GMT+10:00) Hobart</option>
+<option value="Melbourne">(GMT+10:00) Melbourne</option>
+<option value="Port Moresby">(GMT+10:00) Port Moresby</option>
+<option value="Sydney">(GMT+10:00) Sydney</option>
+<option value="Vladivostok">(GMT+10:00) Vladivostok</option>
+<option value="Magadan">(GMT+11:00) Magadan</option>
+<option value="New Caledonia">(GMT+11:00) New Caledonia</option>
+<option value="Solomon Is.">(GMT+11:00) Solomon Is.</option>
+<option value="Srednekolymsk">(GMT+11:00) Srednekolymsk</option>
+<option value="Auckland">(GMT+12:00) Auckland</option>
+<option value="Fiji">(GMT+12:00) Fiji</option>
+<option value="Kamchatka">(GMT+12:00) Kamchatka</option>
+<option value="Marshall Is.">(GMT+12:00) Marshall Is.</option>
+<option value="Wellington">(GMT+12:00) Wellington</option>
+<option value="Chatham Is.">(GMT+12:45) Chatham Is.</option>
+<option value="Nuku'alofa">(GMT+13:00) Nuku'alofa</option>
+<option value="Samoa">(GMT+13:00) Samoa</option>
+<option value="Tokelau Is.">(GMT+13:00) Tokelau Is.</option></select></div></div>
+<div class="line line-dashed b-b line-lg pull-in"></div>
+<div class="form-actions">
+<div class="text-right">
+<a class="btn btn-warning" href="/admin/companies">Cancel</a>
+<input type="submit" name="commit" value="New company" class="btn btn-success" id="create_company_btn" data-disable-with="New company">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+<div class="flash-messages" id="flash-messages">
+<div class="ng-alert alert fade in alert-danger" id="alert_dialog"><button class="close ic ic-close" data-dismiss="alert"></button>An error occurred when creating company</div>
+</div>
+<script src="/assets/admin-1f9c75807259885b0788890ac4f3850443d49497eea5df4d5e826dc4ca9b1644.js"></script>
+<script src="/assets/controllers/admin/companies-ee72859ab7c9149091381299e021777f1408ab6fcd056769415d2ee9477642c0.js"></script>
+</div>
+<script>
+//<![CDATA[
+window.FAYE_URL = "/faye";
+window.FAYE_USER_KEY = "3a204579412313feee39c58e4d98e3f8";
+window.FAYE_BROADCAST_KEY = "2ff50b2e2cf2f4412c18b088809e8e74";
+
+//]]>
+</script>
+<script>
+  I18n.defaultLocale = "en";
+  I18n.locale = "en";
+  I18n.available_locales = "en,ka,pl,pt-BR,ru,es,uk";
+  I18n.fallbacks = "en";
+  I18n.missingPlaceholder = function(placeholder, message) {
+     return placeholder;
+  };
+  
+  dhtmlXCalendarObject.prototype.langData[I18n.locale] = {
+    monthesFNames: [
+      I18n.t('js.highcharts.lang.month.long.jan'),
+      I18n.t('js.highcharts.lang.month.long.feb'),
+      I18n.t('js.highcharts.lang.month.long.mar'),
+      I18n.t('js.highcharts.lang.month.long.apr'),
+      I18n.t('js.highcharts.lang.month.long.may'),
+      I18n.t('js.highcharts.lang.month.long.jun'),
+      I18n.t('js.highcharts.lang.month.long.jul'),
+      I18n.t('js.highcharts.lang.month.long.aug'),
+      I18n.t('js.highcharts.lang.month.long.sep'),
+      I18n.t('js.highcharts.lang.month.long.oct'),
+      I18n.t('js.highcharts.lang.month.long.nov'),
+      I18n.t('js.highcharts.lang.month.long.dec')],
+    monthesSNames: [
+      I18n.t('js.highcharts.lang.month.short.jan'),
+      I18n.t('js.highcharts.lang.month.short.feb'),
+      I18n.t('js.highcharts.lang.month.short.mar'),
+      I18n.t('js.highcharts.lang.month.short.apr'),
+      I18n.t('js.highcharts.lang.month.short.may'),
+      I18n.t('js.highcharts.lang.month.short.jun'),
+      I18n.t('js.highcharts.lang.month.short.jul'),
+      I18n.t('js.highcharts.lang.month.short.aug'),
+      I18n.t('js.highcharts.lang.month.short.sep'),
+      I18n.t('js.highcharts.lang.month.short.oct'),
+      I18n.t('js.highcharts.lang.month.short.nov'),
+      I18n.t('js.highcharts.lang.month.short.dec')],
+    daysFNames: [
+      I18n.t('js.highcharts.lang.weekdays.sun'),
+      I18n.t('js.highcharts.lang.weekdays.mon'),
+      I18n.t('js.highcharts.lang.weekdays.tue'),
+      I18n.t('js.highcharts.lang.weekdays.wed'),
+      I18n.t('js.highcharts.lang.weekdays.thu'),
+      I18n.t('js.highcharts.lang.weekdays.fri'),
+      I18n.t('js.highcharts.lang.weekdays.sat')],
+    daysSNames: [
+      I18n.t('js.highcharts.lang.weekdays.short.sun'),
+      I18n.t('js.highcharts.lang.weekdays.short.mon'),
+      I18n.t('js.highcharts.lang.weekdays.short.tue'),
+      I18n.t('js.highcharts.lang.weekdays.short.wed'),
+      I18n.t('js.highcharts.lang.weekdays.short.thu'),
+      I18n.t('js.highcharts.lang.weekdays.short.fri'),
+      I18n.t('js.highcharts.lang.weekdays.short.sat')]
+  };
+  
+  dhtmlXCalendarObject.prototype.lang = I18n.locale;
+</script>
+
+<script>
+angular.module('currentCompany', []).service('current_company', function(){
+    return false;
+});
+
+angular.module('currentDateTimeFormat', []).service('date_time_format', function(){
+  return {"dp_date_format":null,"moment_date_format":null,"dhtmlx_dp_date_format":null};
+});
+
+    moment.defaultFormat = '';
+
+    moment.dhtmlx_dp_date_format = '';
+
+  if($.fn.datepicker) {
+      _.each($.fn.datepicker.dates, function (attrs, locale) {
+          attrs.format = ''
+      });
+  }
+
+</script>
+
+<script>
+angular.module('currentUser', []).service('current_user', function(){
+    return {"id":11,"first_name":"A","last_name":"A","user_settings":[]};
+});
+
+</script>
+
+<div class="modal fade about-modal" id="about-modal" role="dialog">
+<div class="modal-dialog about-modal__modal">
+<div class="modal-content">
+<div class="modal-header flex-content--end" style="box-shadow: none;">
+<button name="button" type="submit" class="modal-close-btn" title="Close" data-dismiss="modal" data-placement="bottom"></button>
+</div>
+<div class="modal-body text-center">
+<div class="form-group">
+<img class="about-modal__img" src="/assets/leafio_logo-d7baae12b92b32978be60d5237d20888e959a3d3aaa61d98e80d8e8c348f9711.svg">
+</div>
+<div class="form-group about-modal__version">
+<strong>
+Version:
+4.80.0
+</strong>
+</div>
+<div class="form-group">
+<a class="about-modal__inventory-link" href="https://www.leafio.ai/inventory-optimization-solution/" target="_blank">
+leafio.ai&nbsp;
+<i class="ic ic-external-link"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</body></html>
